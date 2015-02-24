@@ -8,7 +8,7 @@ module Axlsx
     # definition of characters which are less than the maximum width of 0-9 in the default font for use in String#count.
     # This is used for autowidth calculations
     THIN_CHARS = '^.acfijklrstxzFIJL()-'.freeze
-    
+
     # Creates a new worksheet.
     # @note the recommended way to manage worksheets is Workbook#add_worksheet
     # @see Workbook#add_worksheet
@@ -225,6 +225,10 @@ module Axlsx
       @page_setup ||= PageSetup.new
       yield @page_setup if block_given?
       @page_setup
+    end
+
+    def tab_color
+      @tab_color ||= TabColor.new
     end
 
     # Options for printing the worksheet.
