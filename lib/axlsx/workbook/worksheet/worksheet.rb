@@ -714,7 +714,7 @@ module Axlsx
       [sheet_pr, dimension, sheet_view, sheet_format_pr, column_info,
        sheet_data, sheet_calc_pr, @sheet_protection, protected_ranges,
        auto_filter, merged_cells, conditional_formattings,
-       data_validations, hyperlinks, print_options, page_margins,
+       data_validations, hyperlinks, print_options, page_margins, tab_color,
        page_setup, header_footer, row_breaks, col_breaks, worksheet_drawing, worksheet_comments,
        tables]
     end
