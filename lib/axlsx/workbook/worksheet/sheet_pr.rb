@@ -46,6 +46,7 @@ module Axlsx
     def to_xml_string(str = '')
       update_properties
       str << "<sheetPr #{serialized_attributes}>"
+      tab_color.to_xml_string(str)
       page_setup_pr.to_xml_string(str)
       str << "</sheetPr>"
     end
@@ -54,6 +55,12 @@ module Axlsx
     # @return [PageSetUpPr]
     def page_setup_pr
       @page_setup_pr ||= PageSetUpPr.new
+    end
+
+    # The TabColor for this sheet
+    # @return [TabColor]
+    def tab_color
+      @tab_color ||= TabColor.new
     end
 
     private
