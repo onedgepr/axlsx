@@ -21,9 +21,11 @@ module Axlsx
 
     # serialize to xml
     def to_xml_string(str = '')
-      str << ('<tabColor>')
-      self.color.to_xml_string(str)
-      str << '</tabColor>'
+      if self.color
+        str << ('<tabColor>')
+        self.color.to_xml_string(str)
+        str << '</tabColor>'
+      end
     end
   end
 end
