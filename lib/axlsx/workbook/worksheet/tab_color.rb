@@ -11,7 +11,7 @@ module Axlsx
 
     # creates a new page setup properties object
     # @param [Color] color
-    def initialize(color)
+    def initialize(color = nil)
        self.color = color
     end
 
